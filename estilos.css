@@ -1,4 +1,5 @@
 :root {
+
     --color1: rgb(219, 144, .5);
     --color2: rgba(23, 180, 83, 0.877);
     --color3: rgba(11, 194, 211, 0.623);
@@ -7,6 +8,7 @@
     --margenes: 60px;
     --espacios: 10px;
     --espacios-contenido: 45px;
+    
 }
 
 * {
