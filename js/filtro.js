@@ -10,50 +10,17 @@ $(function () {
         }
     });
 
-    let equipo = $('#equipo').offset().top,
-        servicio = $('#servicio').offset().top,
-        trabajo = $('#trabajo').offset().top,
-        contacto = $('#contacto').offset().top;
+    // Calcula la posición al hacer clic, así siempre es correcta aunque cambie el tamaño de la ventana
+    function irA(selector) {
+        return function (e) {
+            e.preventDefault();
+            let destino = selector ? $(selector).offset().top - 100 : 0;
+            $('html, body').animate({ scrollTop: destino }, 600);
+        };
+    }
 
-    window.addEventListener('resize', function(){
-        let equipo = $('#equipo').offset().top,
-        servicio = $('#servicio').offset().top,
-        trabajo = $('#trabajo').offset().top,
-        contacto = $('#contacto').offset().top;
-    });
-
-    $('#enlace-inicio').on('click', function(e){
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        },600);
-    });
-
-    $('#enlace-equipo').on('click', function(e){
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: equipo -100
-        },600);
-    });
-
-    $('#enlace-servicio').on('click', function(e){
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: servicio -100
-        },600);
-    });
-
-    $('#enlace-trabajo').on('click', function(e){
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: trabajo -100
-        },600);
-    });
-
-    $('#enlace-contacto').on('click', function(e){
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: contacto -100
-        },600);
-    });
+    $('#enlace-inicio').on('click', irA(null));
+    $('#enlace-equipo').on('click', irA('#servicio'));
+    $('#enlace-servicio').on('click', irA('#trabajo'));
+    $('#enlace-contacto').on('click', irA('#contacto'));
 });
