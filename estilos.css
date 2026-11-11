@@ -255,8 +255,9 @@ nav .enlaces a:hover {
 }
 
 .caja-servicios {
-    width: 30%;
+    width: 45%;
     margin: auto;
+    margin-bottom: var(--espacios-contenido);
     text-align: center;
 }
 
