@@ -9,18 +9,4 @@ $(function () {
             $('.cont-work').filter('.' + valor).show('1000');
         }
     });
-
-    // Calcula la posición al hacer clic, así siempre es correcta aunque cambie el tamaño de la ventana
-    function irA(selector) {
-        return function (e) {
-            e.preventDefault();
-            let destino = selector ? $(selector).offset().top - 100 : 0;
-            $('html, body').animate({ scrollTop: destino }, 600);
-        };
-    }
-
-    $('#enlace-inicio').on('click', irA(null));
-    $('#enlace-generos').on('click', irA('#generos'));
-    $('#enlace-bandas').on('click', irA('#bandas'));
-    $('#enlace-contacto').on('click', irA('#contacto'));
 });
