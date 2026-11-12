@@ -20,7 +20,7 @@ $(function () {
     }
 
     $('#enlace-inicio').on('click', irA(null));
-    $('#enlace-equipo').on('click', irA('#servicio'));
-    $('#enlace-servicio').on('click', irA('#trabajo'));
+    $('#enlace-generos').on('click', irA('#generos'));
+    $('#enlace-bandas').on('click', irA('#bandas'));
     $('#enlace-contacto').on('click', irA('#contacto'));
 });

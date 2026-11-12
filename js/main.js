@@ -7,9 +7,9 @@ let botones = document.getElementsByClassName('btn-header');
 let cerrado = true;
 
 function menus(){
-    let Desplazamiento_Actual = window.pageYOffset;
+    let desplazamientoActual = window.scrollY;
 
-    if(Desplazamiento_Actual <= 300){
+    if(desplazamientoActual <= 300){
         nav.classList.remove('nav2');
         nav.className = ('nav1');
         nav.style.transition = '1s';
@@ -41,7 +41,6 @@ window.addEventListener('load', function(){
     menus();
 });
 window.addEventListener('click',function(e){
-    console.log(e.target);
     if(cerrado==false){
         let span = document.querySelector('span');
         if(e.target !== span && e.target !== abrir){
@@ -52,11 +51,10 @@ window.addEventListener('click',function(e){
     }
 });
 window.addEventListener('scroll', function(){
-    console.log(window.pageYOffset);
     menus();
 });
 window.addEventListener('resize', function(){
-    if(screen.width>= 700){
+    if(window.innerWidth >= 700){
         cerrado = true;
         menu.style.removeProperty('overflow');
         menu.style.removeProperty('width');
