@@ -1,26 +1,19 @@
-$(function () {
-    $('.filter').click(function () {
-        $(this).addClass('active').siblings().removeClass('active');
-        let valor = $(this).attr('data-nombre');
-        if (valor == 'todos') {
-            $('.cont-work').show('1000');
-        } else {
-            $('.cont-work').not('.' + valor).hide('1000');
-            $('.cont-work').filter('.' + valor).show('1000');
-        }
+// Filtro de la galería por género
+const filtros = document.querySelectorAll('.filter');
+const bandas = document.querySelectorAll('.cont-work');
+
+filtros.forEach(function (boton) {
+    boton.addEventListener('click', function () {
+        filtros.forEach(function (otro) {
+            otro.classList.remove('active');
+            otro.setAttribute('aria-pressed', 'false');
+        });
+        boton.classList.add('active');
+        boton.setAttribute('aria-pressed', 'true');
+
+        const genero = boton.dataset.nombre;
+        bandas.forEach(function (banda) {
+            banda.hidden = genero !== 'todos' && !banda.classList.contains(genero);
+        });
     });
-
-    // Calcula la posición al hacer clic, así siempre es correcta aunque cambie el tamaño de la ventana
-    function irA(selector) {
-        return function (e) {
-            e.preventDefault();
-            let destino = selector ? $(selector).offset().top - 100 : 0;
-            $('html, body').animate({ scrollTop: destino }, 600);
-        };
-    }
-
-    $('#enlace-inicio').on('click', irA(null));
-    $('#enlace-generos').on('click', irA('#generos'));
-    $('#enlace-bandas').on('click', irA('#bandas'));
-    $('#enlace-contacto').on('click', irA('#contacto'));
 });

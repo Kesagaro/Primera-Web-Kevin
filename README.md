@@ -9,7 +9,6 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white)
 
 <img src="docs/captura-inicio.jpg" alt="Página de inicio de Rock and Metal" width="800">
 
@@ -26,7 +25,8 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 - **Menú adaptable**: cambia de estilo al hacer scroll y se convierte en menú lateral en pantallas pequeñas.
 - **Diseño responsive** para escritorio, tablet y móvil.
 - **Pantalla de carga** animada mientras se cargan los recursos.
-- **Accesibilidad**: texto alternativo en las imágenes y nombres en los enlaces de redes sociales.
+- **Accesibilidad**: texto alternativo en las imágenes, nombres en los enlaces de redes sociales y filtros que se pueden usar con teclado.
+- **Sin librerías**: todo el comportamiento está hecho con JavaScript nativo.
 
 <div align="center">
 <img src="docs/captura-bandas.jpg" alt="Galería de bandas con filtros por género" width="800">
@@ -37,9 +37,8 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 | Tecnología | Uso |
 |---|---|
 | HTML5 | Estructura semántica del sitio |
-| CSS3 | Estilos, variables, Flexbox, animaciones y media queries |
-| JavaScript | Menú, cambios al hacer scroll y pantalla de carga |
-| jQuery 3.3.1 | Filtro de la galería y desplazamiento animado |
+| CSS3 | Estilos, variables, Flexbox, animaciones, desplazamiento suave y media queries |
+| JavaScript | Menú, filtro de la galería, cambios al hacer scroll y pantalla de carga |
 | Font Awesome 5 | Íconos de redes sociales |
 | Google Fonts | Tipografía Open Sans |
 
@@ -51,8 +50,7 @@ Primera-Web-Kevin/
 ├── estilos.css     # Estilos del sitio
 ├── js/
 │   ├── main.js     # Menú, scroll y pantalla de carga
-│   ├── filtro.js   # Filtro de la galería y navegación
-│   └── jquery.js   # Librería jQuery
+│   └── filtro.js   # Filtro de la galería
 ├── img/            # Imágenes del sitio
 └── docs/           # Capturas para este README
 ```

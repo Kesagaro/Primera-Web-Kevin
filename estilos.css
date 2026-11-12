@@ -16,6 +16,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Deja espacio para el menú fijo al saltar a una sección */
+section,
+footer {
+    scroll-margin-top: 100px;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background: var(--fondo);
@@ -41,6 +51,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity .4s, visibility .4s;
+}
+
+.centrado.oculto {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .cargador {
@@ -239,19 +255,24 @@ nav .enlaces a:hover {
 
 .botones-work li {
     display: inline-block;
-    text-align: center;
     margin-left: var(--espacios);
     margin-bottom: var(--espacios-contenido);
-    padding: 6px 12px;
-    border: 1px solid var(--color1);
     list-style: none;
-    color: var(--color1);
 }
 
-.botones-work li:hover {
+.botones-work button {
+    padding: 6px 12px;
+    border: 1px solid var(--color1);
+    background: transparent;
+    color: var(--color1);
+    font: inherit;
+    cursor: pointer;
+}
+
+.botones-work button:hover,
+.botones-work button:focus-visible {
     background: var(--color1);
     color: #fff;
-    cursor: pointer;
 }
 
 .botones-work .active {
@@ -271,6 +292,18 @@ nav .enlaces a:hover {
     height: 300px;
     overflow: hidden;
     margin-bottom: var(--espacios-contenido);
+    animation: aparecer .4s ease;
+}
+
+.cont-work[hidden] {
+    display: none;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(.95);
+    }
 }
 
 .img-work {
