@@ -41,6 +41,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity .4s, visibility .4s;
+}
+
+.centrado.oculto {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .cargador {

@@ -36,8 +36,8 @@ function apertura(){
 }
 
 window.addEventListener('load', function(){
-    $('#onload').fadeOut();
-    $('body').removeClass('hidden');
+    document.getElementById('onload').classList.add('oculto');
+    document.body.classList.remove('hidden');
     menus();
 });
 window.addEventListener('click',function(e){
