@@ -89,4 +89,3 @@ Fotos de Wikimedia Commons, redimensionadas para la galería:
 
 [![GitHub](https://img.shields.io/badge/GitHub-Kesagaro-181717?style=flat-square&logo=github)](https://github.com/Kesagaro)
 [![YouTube](https://img.shields.io/badge/YouTube-Paradoxx__02-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@Paradoxx_02)
-[![X](https://img.shields.io/badge/X-Kesagar0-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Kesagar0)
