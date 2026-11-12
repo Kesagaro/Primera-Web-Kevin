@@ -114,6 +114,13 @@ header {
     background-size: cover;
 }
 
+/* En pantallas táctiles (iPhone, iPad) el fondo fijo se ve ampliado y borroso */
+@media (hover: none) {
+    header {
+        background-attachment: scroll;
+    }
+}
+
 nav {
     width: 100%;
     position: fixed;
