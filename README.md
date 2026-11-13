@@ -37,9 +37,9 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 | Tecnología | Uso |
 |---|---|
 | HTML5 | Estructura semántica del sitio |
-| CSS3 | Estilos, variables, Flexbox, animaciones, desplazamiento suave y media queries |
+| CSS3 | Estilos, variables, Grid, Flexbox, animaciones, desplazamiento suave y media queries |
 | JavaScript | Menú, filtro de la galería, cambios al hacer scroll y pantalla de carga |
-| Font Awesome 5 | Íconos de redes sociales |
+| Font Awesome 6 | Íconos de redes sociales |
 | Google Fonts | Tipografía Open Sans |
 
 ## Estructura
