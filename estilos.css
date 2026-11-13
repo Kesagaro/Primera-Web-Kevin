@@ -114,6 +114,13 @@ header {
     background-size: cover;
 }
 
+/* En pantallas táctiles (iPhone, iPad) el fondo fijo se ve ampliado y borroso */
+@media (hover: none) {
+    header {
+        background-attachment: scroll;
+    }
+}
+
 nav {
     width: 100%;
     position: fixed;
@@ -227,17 +234,13 @@ nav .enlaces a:hover {
 }
 
 .servicios {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacios-contenido) 10%;
     color: #fff;
-    justify-content: space-between;
-    margin: auto;
-    flex-wrap: wrap;
 }
 
 .caja-servicios {
-    width: 45%;
-    margin: 0 auto;
-    margin-bottom: var(--espacios-contenido);
     text-align: center;
 }
 
@@ -280,18 +283,18 @@ nav .enlaces a:hover {
     color: #fff;
 }
 
+/* auto-fit + justify-content centra las tarjetas cuando el filtro deja menos de una fila */
 .galeria-work {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    justify-content: center;
+    gap: var(--espacios-contenido) 30px;
 }
 
 .cont-work {
-    width: 31%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
     height: 300px;
     overflow: hidden;
-    margin-bottom: var(--espacios-contenido);
     animation: aparecer .4s ease;
 }
 
@@ -400,12 +403,9 @@ footer p {
     :root {
         --espacios-contenido: 25px;
     }
-    .caja-servicios {
-        width: 90%;
-        margin-bottom: var(--margenes);
-    }
-    .cont-work {
-        width: 85%;
+    .servicios {
+        grid-template-columns: 1fr;
+        gap: var(--margenes);
     }
     .marca-logo {
         width: 80%;
