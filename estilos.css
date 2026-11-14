@@ -32,75 +32,10 @@ body {
     background: var(--fondo);
 }
 
+/* width y height del HTML reservan el espacio; el CSS decide el tamaño final */
 img {
     vertical-align: top;
-}
-
-
-/* Preloader */
-
-.hidden {
-    overflow: hidden;
-}
-
-.centrado {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: #000;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity .4s, visibility .4s;
-}
-
-.centrado.oculto {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.cargador {
-    display: inline-block;
-    position: relative;
-    width: 64px;
-    height: 64px;
-}
-
-.cargador div {
-    display: inline-block;
-    position: absolute;
-    left: 6px;
-    width: 13px;
-    background: #cef;
-    animation: cargador 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-}
-
-.cargador div:nth-child(1) {
-    left: 6px;
-    animation-delay: -0.24s;
-}
-
-.cargador div:nth-child(2) {
-    left: 26px;
-    animation-delay: -0.12s;
-}
-
-.cargador div:nth-child(3) {
-    left: 45px;
-    animation-delay: 0;
-}
-
-@keyframes cargador {
-    0% {
-        top: 6px;
-        height: 51px;
-    }
-    50%,
-    100% {
-        top: 19px;
-        height: 26px;
-    }
+    height: auto;
 }
 
 
@@ -109,7 +44,7 @@ img {
 header {
     width: 100%;
     height: 600px;
-    background: linear-gradient(to bottom, rgba(211, 135, 20, .6), rgba(29, 241, 171, .6), rgba(7, 109, 150, .45)), url(img/fondo.jpg);
+    background: linear-gradient(to bottom, rgba(211, 135, 20, .6), rgba(29, 241, 171, .6), rgba(7, 109, 150, .45)), url(img/fondo.webp);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -170,6 +105,10 @@ nav .enlaces a:hover {
 .logo,
 .logo img {
     height: 80px;
+}
+
+.logo img {
+    width: auto;
 }
 
 .icono {
@@ -355,9 +294,10 @@ footer {
     width: 100%;
 }
 
-.fab {
-    font-size: 60px;
-    color: #FFF;
+.icono-red {
+    width: 60px;
+    height: 60px;
+    fill: #fff;
     margin-bottom: var(--espacios);
     display: inline-block;
 }

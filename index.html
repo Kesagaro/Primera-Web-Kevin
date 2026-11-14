@@ -8,24 +8,19 @@
     <title>Rock and Metal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
+    <!-- La fuente se carga sin bloquear: mientras llega, se ve la fuente del sistema -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"></noscript>
+    <link rel="preload" href="img/fondo.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
-<body class="hidden">
-    <div class="centrado" id="onload">
-        <div class="cargador">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+<body>
     <header>
         <nav id="nav" class="nav1">
             <div class="contenedor-nav">
                 <div class="logo">
-                    <img src="img/logo.svg" alt="Rock and Metal">
+                    <img src="img/logo.svg" alt="Rock and Metal" width="120" height="140">
                 </div>
                 <div class="enlaces" id="enlaces">
                     <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
@@ -82,7 +77,7 @@
             <div class="galeria-work">
                 <div class="cont-work heavy-metal">
                     <div class="img-work">
-                        <img src="img/iron-maiden.jpeg" alt="Banda Iron Maiden">
+                        <img src="img/iron-maiden.webp" alt="Banda Iron Maiden" width="810" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Iron Maiden</h4>
@@ -90,7 +85,7 @@
                 </div>
                 <div class="cont-work heavy-metal">
                     <div class="img-work">
-                        <img src="img/black-sabbath.jpeg" alt="Banda Black Sabbath">
+                        <img src="img/black-sabbath.webp" alt="Banda Black Sabbath" width="806" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Black Sabbath</h4>
@@ -98,7 +93,7 @@
                 </div>
                 <div class="cont-work heavy-metal">
                     <div class="img-work">
-                        <img src="img/judas-priest.jpeg" alt="Banda Judas Priest">
+                        <img src="img/judas-priest.webp" alt="Banda Judas Priest" width="805" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Judas Priest</h4>
@@ -106,7 +101,7 @@
                 </div>
                 <div class="cont-work hard-rock">
                     <div class="img-work">
-                        <img src="img/ac-dc.jpeg" alt="Banda AC/DC">
+                        <img src="img/ac-dc.webp" alt="Banda AC/DC" width="720" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>AC/DC</h4>
@@ -114,7 +109,7 @@
                 </div>
                 <div class="cont-work hard-rock">
                     <div class="img-work">
-                        <img src="img/guns-n-roses.jpeg" alt="Banda Guns N' Roses">
+                        <img src="img/guns-n-roses.webp" alt="Banda Guns N' Roses" width="960" height="518" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Guns N' Roses</h4>
@@ -122,7 +117,7 @@
                 </div>
                 <div class="cont-work hard-rock">
                     <div class="img-work">
-                        <img src="img/led-zeppelin.jpeg" alt="Banda Led Zeppelin">
+                        <img src="img/led-zeppelin.webp" alt="Banda Led Zeppelin" width="800" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Led Zeppelin</h4>
@@ -130,7 +125,7 @@
                 </div>
                 <div class="cont-work thrash-metal">
                     <div class="img-work">
-                        <img src="img/slayer.jpeg" alt="Banda Slayer">
+                        <img src="img/slayer.webp" alt="Banda Slayer" width="621" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Slayer</h4>
@@ -138,7 +133,7 @@
                 </div>
                 <div class="cont-work thrash-metal">
                     <div class="img-work">
-                        <img src="img/testament.jpeg" alt="Banda Testament">
+                        <img src="img/testament.webp" alt="Banda Testament" width="810" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Testament</h4>
@@ -146,7 +141,7 @@
                 </div>
                 <div class="cont-work death-metal">
                     <div class="img-work">
-                        <img src="img/death.jpeg" alt="Banda Death">
+                        <img src="img/death.webp" alt="Banda Death" width="759" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Death</h4>
@@ -154,7 +149,7 @@
                 </div>
                 <div class="cont-work death-metal">
                     <div class="img-work">
-                        <img src="img/cannibal-corpse.jpg" alt="Banda Cannibal Corpse">
+                        <img src="img/cannibal-corpse.webp" alt="Banda Cannibal Corpse" width="960" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Cannibal Corpse</h4>
@@ -162,7 +157,7 @@
                 </div>
                 <div class="cont-work death-metal">
                     <div class="img-work">
-                        <img src="img/morbid-angel.jpg" alt="Banda Morbid Angel">
+                        <img src="img/morbid-angel.webp" alt="Banda Morbid Angel" width="811" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
                         <h4>Morbid Angel</h4>
@@ -174,13 +169,13 @@
     <footer id="contacto">
         <div class="footer contenedor">
             <div class="marca-logo">
-                <img src="img/logo.svg" alt="Rock and Metal">
+                <img src="img/logo.svg" alt="Rock and Metal" width="120" height="140">
             </div>
             <div class="iconos">
                 <a href="https://www.youtube.com/@Paradoxx_02" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-youtube"></i></a>
+                <svg class="icono-red" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
                 <a href="https://github.com/Kesagaro" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i></a>
+                <svg class="icono-red" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
             </div>
             <p>Hecho a todo volumen: guitarras distorsionadas, puños en alto y un corazón que late al ritmo del doble bombo.</p>
         </div>
