@@ -156,7 +156,7 @@ nav .enlaces a:focus-visible {
     overflow: hidden;
 }
 
-.contenedor h3 {
+.contenedor h2 {
     font-size: var(--titulos);
     color: var(--color1);
     margin-bottom: var(--espacios);
@@ -195,12 +195,18 @@ nav .enlaces a:focus-visible {
     text-align: center;
 }
 
-.caja-servicios>h4 {
+.caja-servicios>h3 {
+    font-size: 1rem;
     margin-bottom: var(--espacios);
 }
 
 .caja-servicios>p {
     text-align: center;
+}
+
+/* Sobre el fondo claro el naranja original no se lee bien: se usa uno más oscuro */
+.work {
+    --color1: #9e5c00;
 }
 
 .botones-work {
@@ -275,7 +281,8 @@ nav .enlaces a:focus-visible {
     height: 10%;
 }
 
-.textos-work h4 {
+.textos-work h3 {
+    font-size: 1rem;
     line-height: 30px;
     font-weight: 300;
 }
