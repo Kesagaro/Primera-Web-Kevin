@@ -25,7 +25,8 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 - **Menú adaptable**: cambia de estilo al hacer scroll y se convierte en menú lateral en pantallas pequeñas.
 - **Diseño responsive** para escritorio, tablet y móvil.
 - **Carga rápida**: imágenes en WebP que se cargan al acercarse, íconos SVG y fuente que no bloquea el render. Lighthouse marca 100 en rendimiento en escritorio.
-- **Accesibilidad**: texto alternativo en las imágenes, nombres en los enlaces de redes sociales y filtros que se pueden usar con teclado.
+- **Accesibilidad**: colores con contraste suficiente, títulos en orden, menú y filtros que se pueden usar con teclado, y texto alternativo en las imágenes. Lighthouse marca 100 en accesibilidad.
+- **Lista para compartir**: favicon y etiquetas Open Graph para que el enlace muestre título, descripción e imagen en redes y chats.
 - **Sin librerías**: todo el comportamiento está hecho con JavaScript nativo.
 
 <div align="center">
