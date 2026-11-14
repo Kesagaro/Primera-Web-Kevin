@@ -32,8 +32,10 @@ body {
     background: var(--fondo);
 }
 
+/* width y height del HTML reservan el espacio; el CSS decide el tamaño final */
 img {
     vertical-align: top;
+    height: auto;
 }
 
 
@@ -103,6 +105,10 @@ nav .enlaces a:hover {
 .logo,
 .logo img {
     height: 80px;
+}
+
+.logo img {
+    width: auto;
 }
 
 .icono {
