@@ -294,9 +294,10 @@ footer {
     width: 100%;
 }
 
-.fab {
-    font-size: 60px;
-    color: #FFF;
+.icono-red {
+    width: 60px;
+    height: 60px;
+    fill: #fff;
     margin-bottom: var(--espacios);
     display: inline-block;
 }

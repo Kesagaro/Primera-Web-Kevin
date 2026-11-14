@@ -39,7 +39,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 | HTML5 | Estructura semántica del sitio |
 | CSS3 | Estilos, variables, Grid, Flexbox, animaciones, desplazamiento suave y media queries |
 | JavaScript | Menú, filtro de la galería, cambios al hacer scroll y pantalla de carga |
-| Font Awesome 6 | Íconos de redes sociales |
+| SVG | Logo propio e íconos de redes sociales de [Simple Icons](https://simpleicons.org/) (dominio público, CC0) |
 | Google Fonts | Tipografía Open Sans |
 
 ## Estructura
