@@ -339,6 +339,7 @@ footer {
 
 .marca-logo {
     width: 40%;
+    max-width: 160px;
     margin: auto;
     margin-bottom: var(--espacios);
 }

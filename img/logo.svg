@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="Rock and Metal">
+    <path d="M60 5C99 5 115 19 115 41c0 39-35 75-55 94C40 116 5 80 5 41 5 19 21 5 60 5z" fill="#16191e" stroke="#db9000" stroke-width="6"/>
+    <path d="M60 17c30 0 43 10 43 27 0 30-26 59-43 75C43 103 17 74 17 44c0-17 13-27 43-27z" fill="none" stroke="#db9000" stroke-width="1.5" opacity=".5"/>
+    <text x="60" y="76" text-anchor="middle" font-family="'Arial Black', 'Open Sans', Arial, sans-serif" font-weight="900" font-size="36" letter-spacing="-1" fill="#db9000">R&amp;M</text>
+</svg>
