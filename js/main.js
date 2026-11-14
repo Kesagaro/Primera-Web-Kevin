@@ -35,11 +35,7 @@ function apertura(){
     }
 }
 
-window.addEventListener('load', function(){
-    document.getElementById('onload').classList.add('oculto');
-    document.body.classList.remove('hidden');
-    menus();
-});
+menus();
 window.addEventListener('click',function(e){
     if(cerrado==false){
         let span = document.querySelector('span');
