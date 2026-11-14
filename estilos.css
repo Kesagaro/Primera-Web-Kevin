@@ -115,6 +115,17 @@ nav .enlaces a:hover {
     display: none;
     font-size: 24px;
     padding: 23.5px 20px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    line-height: 1;
+}
+
+.icono:focus-visible,
+nav .enlaces a:focus-visible {
+    outline: 2px solid #1498a4;
+    outline-offset: 2px;
 }
 
 .textos {
