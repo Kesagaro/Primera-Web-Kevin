@@ -76,10 +76,27 @@ No necesita instalación ni dependencias.
 
 ## Créditos de imágenes
 
-Fotos de Wikimedia Commons, redimensionadas para la galería:
+Todas las fotos son de Wikimedia Commons, con licencia Creative Commons, y están redimensionadas para el sitio.
 
+**Galería**
+
+- `img/iron-maiden.jpeg`: [Iron Maiden – Tons of Rock 2026](https://commons.wikimedia.org/wiki/File:Iron_Maiden_%E2%80%93_Tons_of_Rock_2026.jpg), por Birgit Fostervold, licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `img/black-sabbath.jpeg`: [Black Sabbath (2013)](https://commons.wikimedia.org/wiki/File:Black_Sabbath_(2013).jpg), por Robson Batista, licencia [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- `img/judas-priest.jpeg`: [Judas Priest - Wacken Open Air 2018 01](https://commons.wikimedia.org/wiki/File:Judas_Priest_-_Wacken_Open_Air_2018_01.jpg), por Frank Schwichtenberg, licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `img/ac-dc.jpeg`: [AC DC at London's Olympic Stadium](https://commons.wikimedia.org/wiki/File:AC_DC_at_London%27s_Olympic_Stadium.jpg), por Egghead06, licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `img/guns-n-roses.jpeg`: [GNR London Stadium 2017 3 (cropped)](https://commons.wikimedia.org/wiki/File:GNR_London_Stadium_2017_3_(cropped).jpg), por Raph_PH, licencia [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- `img/led-zeppelin.jpeg`: [LedZeppelinChicago75](https://commons.wikimedia.org/wiki/File:LedZeppelinChicago75.jpg), por more19562003, licencia [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- `img/slayer.jpeg`: [Slayer - band - live 2006](https://commons.wikimedia.org/wiki/File:Slayer_-_band_-_live_2006.jpg), por Gabriele (recorte de JD), licencia [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- `img/testament.jpeg`: [Testament band](https://commons.wikimedia.org/wiki/File:Testament_band.jpg), por Rockman, licencia [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- `img/death.jpeg`: [Death Mexico 06-89](https://commons.wikimedia.org/wiki/File:Death_Mexico_06-89.jpg), por A Sniper, licencia [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 - `img/cannibal-corpse.jpg`: [CannibalCorpse](https://commons.wikimedia.org/wiki/File:CannibalCorpse.jpg), por Chris Buresh, licencia [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
 - `img/morbid-angel.jpg`: [Morbid Angel - Geiselwind 2012](https://commons.wikimedia.org/wiki/File:Morbid_Angel_-_Geiselwind_2012.jpg), por Voltago, licencia [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+
+**Fondo del encabezado**
+
+- `img/fondo.jpg`: [Metal crowd](https://commons.wikimedia.org/wiki/File:Metal_crowd.jpg), por WanderingTrad, licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+El logo y los degradados de fondo son de creación propia.
 
 ## Autor
 
