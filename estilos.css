@@ -2,6 +2,7 @@
 
     --color1: rgb(219, 144, 0);
     --fondo: #f2f2f2;
+    --fondo-oscuro: linear-gradient(135deg, #1f252d, #0e1115);
     --titulos: 33px;
     --subtitulos: 16px;
     --margenes: 60px;
@@ -229,7 +230,7 @@ nav .enlaces a:hover {
 }
 
 .about {
-    background: url(img/teclado.jpg);
+    background: var(--fondo-oscuro);
     height: auto;
 }
 
@@ -333,7 +334,7 @@ nav .enlaces a:hover {
 /* Footer */
 
 footer {
-    background: url(img/teclado.jpg);
+    background: var(--fondo-oscuro);
 }
 
 .marca-logo {
