@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Recorrido por cuatro géneros del rock y el metal y una galería de sus bandas más representativas.">
     <title>Rock and Metal</title>
+    <meta name="theme-color" content="#1f252d">
+    <link rel="canonical" href="https://kesagaro.github.io/Primera-Web-Kevin/">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <!-- Vista previa al compartir el enlace (WhatsApp, Facebook, Discord...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Rock and Metal">
+    <meta property="og:title" content="Rock and Metal">
+    <meta property="og:description" content="Recorrido por cuatro géneros del rock y el metal y una galería de sus bandas más representativas.">
+    <meta property="og:url" content="https://kesagaro.github.io/Primera-Web-Kevin/">
+    <meta property="og:image" content="https://kesagaro.github.io/Primera-Web-Kevin/docs/captura-inicio.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="455">
+    <meta property="og:image:alt" content="Portada de la página Rock and Metal">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- La fuente se carga sin bloquear: mientras llega, se ve la fuente del sistema -->
@@ -28,9 +42,7 @@
                     <a href="#bandas" id="enlace-bandas" class="btn-header">Bandas</a>
                     <a href="#contacto" id="enlace-contacto" class="btn-header">Contacto</a>
                 </div>
-                <div class="icono" id="open">
-                    <span>&#9776;</span>
-                </div>
+                <button type="button" class="icono" id="open" aria-label="Abrir menú" aria-controls="enlaces" aria-expanded="false">&#9776;</button>
             </div>
         </nav>
         <div class="textos">
@@ -40,30 +52,30 @@
     <main>
         <section class="about" id="generos">
             <div class="contenedor">
-                <h3>Géneros conocidos</h3>
+                <h2>Géneros conocidos</h2>
                 <p class="after">4 géneros conocidos del rock y el metal</p>
                 <div class="servicios">
                     <div class="caja-servicios">
-                        <h4>Heavy Metal</h4>
+                        <h3>Heavy Metal</h3>
                         <p>Nació a finales de los años 60 a partir del hard rock y el blues rock. Se caracteriza por guitarras eléctricas distorsionadas, solos virtuosos, ritmos contundentes y voces potentes.</p>
                     </div>
                     <div class="caja-servicios">
-                        <h4>Hard Rock</h4>
+                        <h3>Hard Rock</h3>
                         <p>Combina el rock and roll y el blues con un sonido más fuerte: guitarras eléctricas distorsionadas, bajo, batería y, en ocasiones, teclados.</p>
                     </div>
                     <div class="caja-servicios">
-                        <h4>Thrash Metal</h4>
+                        <h3>Thrash Metal</h3>
                         <p>Subgénero más rápido y agresivo del heavy metal, surgido a comienzos de los años 80. Mezcla la velocidad del hardcore punk con riffs cortantes, doble bombo y solos rápidos.</p>
                     </div>
                     <div class="caja-servicios">
-                        <h4>Death Metal</h4>
+                        <h3>Death Metal</h3>
                         <p>Subgénero extremo del metal surgido a mediados de los años 80. Se caracteriza por voces guturales, guitarras graves y muy distorsionadas, blast beats en la batería y letras oscuras.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="work contenedor" id="bandas">
-            <h3>Bandas</h3>
+            <h2>Bandas</h2>
             <p class="after">Algunas bandas representativas de cada género</p>
             <div class="botones-work">
                 <ul>
@@ -80,7 +92,7 @@
                         <img src="img/iron-maiden.webp" alt="Banda Iron Maiden" width="810" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Iron Maiden</h4>
+                        <h3>Iron Maiden</h3>
                     </div>
                 </div>
                 <div class="cont-work heavy-metal">
@@ -88,7 +100,7 @@
                         <img src="img/black-sabbath.webp" alt="Banda Black Sabbath" width="806" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Black Sabbath</h4>
+                        <h3>Black Sabbath</h3>
                     </div>
                 </div>
                 <div class="cont-work heavy-metal">
@@ -96,7 +108,7 @@
                         <img src="img/judas-priest.webp" alt="Banda Judas Priest" width="805" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Judas Priest</h4>
+                        <h3>Judas Priest</h3>
                     </div>
                 </div>
                 <div class="cont-work hard-rock">
@@ -104,7 +116,7 @@
                         <img src="img/ac-dc.webp" alt="Banda AC/DC" width="720" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>AC/DC</h4>
+                        <h3>AC/DC</h3>
                     </div>
                 </div>
                 <div class="cont-work hard-rock">
@@ -112,7 +124,7 @@
                         <img src="img/guns-n-roses.webp" alt="Banda Guns N' Roses" width="960" height="518" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Guns N' Roses</h4>
+                        <h3>Guns N' Roses</h3>
                     </div>
                 </div>
                 <div class="cont-work hard-rock">
@@ -120,7 +132,7 @@
                         <img src="img/led-zeppelin.webp" alt="Banda Led Zeppelin" width="800" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Led Zeppelin</h4>
+                        <h3>Led Zeppelin</h3>
                     </div>
                 </div>
                 <div class="cont-work thrash-metal">
@@ -128,7 +140,7 @@
                         <img src="img/slayer.webp" alt="Banda Slayer" width="621" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Slayer</h4>
+                        <h3>Slayer</h3>
                     </div>
                 </div>
                 <div class="cont-work thrash-metal">
@@ -136,7 +148,7 @@
                         <img src="img/testament.webp" alt="Banda Testament" width="810" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Testament</h4>
+                        <h3>Testament</h3>
                     </div>
                 </div>
                 <div class="cont-work death-metal">
@@ -144,7 +156,7 @@
                         <img src="img/death.webp" alt="Banda Death" width="759" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Death</h4>
+                        <h3>Death</h3>
                     </div>
                 </div>
                 <div class="cont-work death-metal">
@@ -152,7 +164,7 @@
                         <img src="img/cannibal-corpse.webp" alt="Banda Cannibal Corpse" width="960" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Cannibal Corpse</h4>
+                        <h3>Cannibal Corpse</h3>
                     </div>
                 </div>
                 <div class="cont-work death-metal">
@@ -160,7 +172,7 @@
                         <img src="img/morbid-angel.webp" alt="Banda Morbid Angel" width="811" height="540" loading="lazy" decoding="async">
                     </div>
                     <div class="textos-work">
-                        <h4>Morbid Angel</h4>
+                        <h3>Morbid Angel</h3>
                     </div>
                 </div>
             </div>

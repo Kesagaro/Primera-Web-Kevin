@@ -24,26 +24,36 @@ function menus(){
     }
 }
 
+function cerrarMenu(){
+    menu.style.width = '0%';
+    menu.style.overflow = 'hidden';
+    cerrado = true;
+    abrir.setAttribute('aria-expanded', 'false');
+    abrir.setAttribute('aria-label', 'Abrir menú');
+}
+
 function apertura(){
     if(cerrado){
         menu.style.width = '70vw';
         cerrado = false;
+        abrir.setAttribute('aria-expanded', 'true');
+        abrir.setAttribute('aria-label', 'Cerrar menú');
     }else{
-        menu.style.width = '0%';
-        menu.style.overflow = 'hidden';
-        cerrado = true;
+        cerrarMenu();
     }
 }
 
 menus();
 window.addEventListener('click',function(e){
-    if(cerrado==false){
-        let span = document.querySelector('span');
-        if(e.target !== span && e.target !== abrir){
-            menu.style.width = '0%';
-            menu.style.overflow = 'hidden';
-            cerrado = true;
-        }
+    if(!cerrado && !abrir.contains(e.target)){
+        cerrarMenu();
+    }
+});
+// Con la tecla Escape también se cierra el menú
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && !cerrado){
+        cerrarMenu();
+        abrir.focus();
     }
 });
 window.addEventListener('scroll', function(){
@@ -52,6 +62,8 @@ window.addEventListener('scroll', function(){
 window.addEventListener('resize', function(){
     if(window.innerWidth >= 700){
         cerrado = true;
+        abrir.setAttribute('aria-expanded', 'false');
+        abrir.setAttribute('aria-label', 'Abrir menú');
         menu.style.removeProperty('overflow');
         menu.style.removeProperty('width');
     }
