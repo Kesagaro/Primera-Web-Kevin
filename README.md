@@ -20,7 +20,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 
 ## Características
 
-- **Galería filtrable**: once bandas organizadas en Hard Rock, Heavy Metal, Thrash Metal y Death Metal.
+- **Galería filtrable**: once bandas organizadas en Hard Rock, Heavy Metal, Thrash Metal y Death Metal. Las tarjetas se generan con JavaScript a partir de `bandas.json`.
 - **Navegación con desplazamiento suave** hacia cada sección.
 - **Menú adaptable**: cambia de estilo al hacer scroll y se convierte en menú lateral en pantallas pequeñas.
 - **Diseño responsive** para escritorio, tablet y móvil.
@@ -39,7 +39,8 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 |---|---|
 | HTML5 | Estructura semántica del sitio |
 | CSS3 | Estilos, variables, Grid, Flexbox, animaciones, desplazamiento suave y media queries |
-| JavaScript | Menú, filtro de la galería y cambios al hacer scroll |
+| JavaScript | Menú, galería generada desde JSON con `fetch`, filtro y cambios al hacer scroll |
+| JSON | Datos de las bandas (`bandas.json`) |
 | SVG | Logo propio e íconos de redes sociales de [Simple Icons](https://simpleicons.org/) (dominio público, CC0) |
 | Google Fonts | Tipografía Open Sans |
 
@@ -49,9 +50,10 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 Primera-Web-Kevin/
 ├── index.html      # Página principal
 ├── estilos.css     # Estilos del sitio
+├── bandas.json     # Datos de las bandas de la galería
 ├── js/
 │   ├── main.js     # Menú y cambios al hacer scroll
-│   └── filtro.js   # Filtro de la galería
+│   └── filtro.js   # Galería y filtro por género
 ├── img/            # Imágenes del sitio
 └── docs/           # Capturas para este README
 ```
@@ -65,7 +67,7 @@ Primera-Web-Kevin/
    cd Primera-Web-Kevin
    ```
 
-2. Abre `index.html` en el navegador, o levanta un servidor local:
+2. Levanta un servidor local:
 
    ```bash
    python -m http.server 5500
@@ -73,7 +75,26 @@ Primera-Web-Kevin/
 
    y entra a <http://localhost:5500>.
 
-No necesita instalación ni dependencias.
+No necesita instalación ni dependencias. La galería se carga con `fetch`, así que abrir `index.html` con doble clic no muestra las bandas: hace falta el servidor local (o la versión publicada en GitHub Pages).
+
+### Agregar una banda
+
+1. Guarda la foto en `img/` en formato WebP.
+2. Agrega un objeto en `bandas.json`:
+
+   ```json
+   {
+       "nombre": "Nombre de la banda",
+       "genero": "heavy-metal",
+       "imagen": "img/nombre-de-la-banda.webp",
+       "alt": "Banda Nombre de la banda",
+       "ancho": 810,
+       "alto": 540
+   }
+   ```
+
+   `genero` debe ser `hard-rock`, `heavy-metal`, `thrash-metal` o `death-metal`, igual que en los botones del filtro. `ancho` y `alto` son las medidas de la foto en píxeles.
+3. Si la foto no es tuya, agrega su crédito en la sección de abajo.
 
 ## Créditos de imágenes
 
