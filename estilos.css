@@ -259,6 +259,11 @@ nav .enlaces a:focus-visible {
     display: none;
 }
 
+/* Mensaje cuando la galería no se puede mostrar: ocupa todo el ancho */
+.aviso-galeria {
+    grid-column: 1 / -1;
+}
+
 @keyframes aparecer {
     from {
         opacity: 0;

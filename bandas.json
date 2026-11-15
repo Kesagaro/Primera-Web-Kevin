@@ -1,0 +1,90 @@
+[
+    {
+        "nombre": "Iron Maiden",
+        "genero": "heavy-metal",
+        "imagen": "img/iron-maiden.webp",
+        "alt": "Banda Iron Maiden",
+        "ancho": 810,
+        "alto": 540
+    },
+    {
+        "nombre": "Black Sabbath",
+        "genero": "heavy-metal",
+        "imagen": "img/black-sabbath.webp",
+        "alt": "Banda Black Sabbath",
+        "ancho": 806,
+        "alto": 540
+    },
+    {
+        "nombre": "Judas Priest",
+        "genero": "heavy-metal",
+        "imagen": "img/judas-priest.webp",
+        "alt": "Banda Judas Priest",
+        "ancho": 805,
+        "alto": 540
+    },
+    {
+        "nombre": "AC/DC",
+        "genero": "hard-rock",
+        "imagen": "img/ac-dc.webp",
+        "alt": "Banda AC/DC",
+        "ancho": 720,
+        "alto": 540
+    },
+    {
+        "nombre": "Guns N' Roses",
+        "genero": "hard-rock",
+        "imagen": "img/guns-n-roses.webp",
+        "alt": "Banda Guns N' Roses",
+        "ancho": 960,
+        "alto": 518
+    },
+    {
+        "nombre": "Led Zeppelin",
+        "genero": "hard-rock",
+        "imagen": "img/led-zeppelin.webp",
+        "alt": "Banda Led Zeppelin",
+        "ancho": 800,
+        "alto": 540
+    },
+    {
+        "nombre": "Slayer",
+        "genero": "thrash-metal",
+        "imagen": "img/slayer.webp",
+        "alt": "Banda Slayer",
+        "ancho": 621,
+        "alto": 540
+    },
+    {
+        "nombre": "Testament",
+        "genero": "thrash-metal",
+        "imagen": "img/testament.webp",
+        "alt": "Banda Testament",
+        "ancho": 810,
+        "alto": 540
+    },
+    {
+        "nombre": "Death",
+        "genero": "death-metal",
+        "imagen": "img/death.webp",
+        "alt": "Banda Death",
+        "ancho": 759,
+        "alto": 540
+    },
+    {
+        "nombre": "Cannibal Corpse",
+        "genero": "death-metal",
+        "imagen": "img/cannibal-corpse.webp",
+        "alt": "Banda Cannibal Corpse",
+        "ancho": 960,
+        "alto": 540
+    },
+    {
+        "nombre": "Morbid Angel",
+        "genero": "death-metal",
+        "imagen": "img/morbid-angel.webp",
+        "alt": "Banda Morbid Angel",
+        "ancho": 811,
+        "alto": 540
+    }
+]
