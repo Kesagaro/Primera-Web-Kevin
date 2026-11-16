@@ -21,6 +21,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 ## Características
 
 - **Galería filtrable**: once bandas organizadas en Hard Rock, Heavy Metal, Thrash Metal y Death Metal. Las tarjetas se generan con JavaScript a partir de `bandas.json`.
+- **Ficha de cada banda**: al pulsar una tarjeta se abre una ventana (`<dialog>`) con el país, el año de formación, una breve reseña y un video oficial de YouTube. Se cierra con Escape, con la ✕ o haciendo clic afuera.
 - **Navegación con desplazamiento suave** hacia cada sección.
 - **Menú adaptable**: cambia de estilo al hacer scroll y se convierte en menú lateral en pantallas pequeñas.
 - **Diseño responsive** para escritorio, tablet y móvil.
@@ -41,6 +42,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 | CSS3 | Estilos, variables, Grid, Flexbox, animaciones, desplazamiento suave y media queries |
 | JavaScript | Menú, galería generada desde JSON con `fetch`, filtro y cambios al hacer scroll |
 | JSON | Datos de las bandas (`bandas.json`) |
+| YouTube | Videos oficiales insertados con `youtube-nocookie.com`, que solo se cargan al abrir la ficha |
 | SVG | Logo propio e íconos de redes sociales de [Simple Icons](https://simpleicons.org/) (dominio público, CC0) |
 | Google Fonts | Tipografía Open Sans |
 
@@ -89,16 +91,25 @@ No necesita instalación ni dependencias. La galería se carga con `fetch`, así
        "imagen": "img/nombre-de-la-banda.webp",
        "alt": "Banda Nombre de la banda",
        "ancho": 810,
-       "alto": 540
+       "alto": 540,
+       "pais": "País",
+       "formacion": 1980,
+       "descripcion": "Reseña corta de la banda.",
+       "video": {
+           "id": "ID_DEL_VIDEO",
+           "titulo": "Nombre de la canción"
+       }
    }
    ```
 
-   `genero` debe ser `hard-rock`, `heavy-metal`, `thrash-metal` o `death-metal`, igual que en los botones del filtro. `ancho` y `alto` son las medidas de la foto en píxeles.
+   `genero` debe ser `hard-rock`, `heavy-metal`, `thrash-metal` o `death-metal`, igual que en los botones del filtro. `ancho` y `alto` son las medidas de la foto en píxeles. `video.id` es lo que va después de `watch?v=` en el enlace de YouTube; usa un video del canal oficial de la banda o de su disquera.
 3. Si la foto no es tuya, agrega su crédito en la sección de abajo.
 
-## Créditos de imágenes
+## Créditos de imágenes y videos
 
 Todas las fotos son de Wikimedia Commons, con licencia Creative Commons, y están redimensionadas para el sitio.
+
+Los videos no están alojados en este repositorio: se insertan desde los canales oficiales de cada banda o de su disquera en YouTube, y sus derechos pertenecen a sus autores.
 
 **Galería**
 
