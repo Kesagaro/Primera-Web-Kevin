@@ -106,6 +106,17 @@
         </div>
 
     </footer>
+    <!-- Ficha de banda: filtro.js la llena con los datos de bandas.json -->
+    <dialog class="ficha" id="ficha" aria-labelledby="ficha-nombre">
+        <div class="ficha-contenido">
+            <button type="button" class="ficha-cerrar" aria-label="Cerrar ficha">&times;</button>
+            <h2 id="ficha-nombre"></h2>
+            <p class="ficha-datos"></p>
+            <p class="ficha-descripcion"></p>
+            <div class="ficha-video"></div>
+            <a class="ficha-enlace" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
+        </div>
+    </dialog>
     <script src="js/main.js"></script>
     <script src="js/filtro.js"></script>
 </body>
