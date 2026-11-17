@@ -25,6 +25,14 @@
     <!-- La fuente se carga sin bloquear: mientras llega, se ve la fuente del sistema -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"></noscript>
+    <!-- Aplica el tema antes de pintar para que el modo oscuro no parpadee en blanco -->
+    <script>
+        try {
+            var temaGuardado = localStorage.getItem('tema');
+        } catch (e) {}
+        document.documentElement.dataset.tema = temaGuardado ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro');
+    </script>
     <link rel="preload" href="img/fondo.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -42,6 +50,10 @@
                     <a href="#bandas" id="enlace-bandas" class="btn-header">Bandas</a>
                     <a href="#contacto" id="enlace-contacto" class="btn-header">Contacto</a>
                 </div>
+                <button type="button" class="tema" id="tema" aria-label="Modo oscuro" aria-pressed="false">
+                    <svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                    <svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
                 <button type="button" class="icono" id="open" aria-label="Abrir menú" aria-controls="enlaces" aria-expanded="false">&#9776;</button>
             </div>
         </nav>
@@ -77,6 +89,10 @@
         <section class="work contenedor" id="bandas">
             <h2>Bandas</h2>
             <p class="after">Algunas bandas representativas de cada género</p>
+            <div class="buscador">
+                <label for="buscar" class="solo-lectores">Buscar banda</label>
+                <input type="search" id="buscar" placeholder="Buscar banda…" autocomplete="off">
+            </div>
             <div class="botones-work">
                 <ul>
                     <li><button type="button" class="filter active" data-nombre="todos" aria-pressed="true">Todos</button></li>
@@ -89,6 +105,7 @@
             <div class="galeria-work" id="galeria">
                 <noscript><p class="aviso-galeria">Activa JavaScript para ver la galería de bandas.</p></noscript>
             </div>
+            <p class="sin-resultados" id="sin-resultados" role="status"></p>
         </section>
     </main>
     <footer id="contacto">
@@ -117,6 +134,7 @@
             <a class="ficha-enlace" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
         </div>
     </dialog>
+    <script src="js/tema.js"></script>
     <script src="js/main.js"></script>
     <script src="js/filtro.js"></script>
 </body>

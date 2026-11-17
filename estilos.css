@@ -2,6 +2,9 @@
 
     --color1: rgb(219, 144, 0);
     --fondo: #f2f2f2;
+    --texto: #000;
+    --texto-suave: #595959;
+    --tarjeta: transparent;
     --fondo-oscuro: linear-gradient(135deg, #1f252d, #0e1115);
     --titulos: 33px;
     --subtitulos: 16px;
@@ -9,6 +12,15 @@
     --espacios: 10px;
     --espacios-contenido: 45px;
     
+}
+
+/* Modo oscuro: solo cambian las partes claras; Géneros y el pie ya son oscuros */
+:root[data-tema="oscuro"] {
+    --fondo: #15191f;
+    --texto: #e8e8e8;
+    --texto-suave: #a0a0a0;
+    --tarjeta: #1f252d;
+    color-scheme: dark;
 }
 
 * {
@@ -30,6 +42,7 @@ footer {
 body {
     font-family: 'Open Sans', sans-serif;
     background: var(--fondo);
+    color: var(--texto);
 }
 
 /* width y height del HTML reservan el espacio; el CSS decide el tamaño final */
@@ -72,7 +85,7 @@ nav {
 .nav2 {
     background: var(--fondo);
     height: 100px;
-    color: #000;
+    color: var(--texto);
 }
 
 .contenedor-nav {
@@ -100,6 +113,40 @@ nav .enlaces a {
 nav .enlaces a:hover {
     border-bottom: 3px solid #1498a4;
     transition: 0.6s;
+}
+
+.enlaces {
+    margin-left: auto;
+}
+
+/* Botón de modo claro / oscuro */
+.tema {
+    display: flex;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.tema svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.tema .icono-sol,
+:root[data-tema="oscuro"] .tema .icono-luna {
+    display: none;
+}
+
+:root[data-tema="oscuro"] .tema .icono-sol {
+    display: block;
+}
+
+.tema:focus-visible {
+    outline: 2px solid #1498a4;
+    outline-offset: 2px;
 }
 
 .logo,
@@ -209,6 +256,55 @@ nav .enlaces a:focus-visible {
     --color1: #9e5c00;
 }
 
+/* Sobre el fondo oscuro vuelve el naranja original, con texto negro en los botones activos */
+:root[data-tema="oscuro"] .work {
+    --color1: rgb(219, 144, 0);
+}
+
+:root[data-tema="oscuro"] .botones-work button:hover,
+:root[data-tema="oscuro"] .botones-work button:focus-visible,
+:root[data-tema="oscuro"] .botones-work .active {
+    color: #000;
+}
+
+/* Texto solo para lectores de pantalla */
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.buscador {
+    margin-bottom: 20px;
+}
+
+.buscador input {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px 14px;
+    border: 1px solid var(--color1);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--texto);
+    font: inherit;
+}
+
+.buscador input::placeholder {
+    color: var(--texto-suave);
+}
+
+.buscador input:focus-visible {
+    outline: 2px solid var(--color1);
+    outline-offset: 2px;
+}
+
+.contenedor .sin-resultados:not(:empty) {
+    margin-top: 10px;
+}
+
 .botones-work {
     overflow: hidden;
 }
@@ -249,6 +345,7 @@ nav .enlaces a:focus-visible {
 }
 
 .cont-work {
+    background: var(--tarjeta);
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
     height: 300px;
     overflow: hidden;
@@ -453,6 +550,13 @@ footer p {
 @media screen and (max-width: 700px) {
     .nav2 {
         color: #fff;
+    }
+    .nav2 .icono,
+    .nav2 .tema {
+        color: var(--texto);
+    }
+    .tema {
+        margin-left: auto;
     }
     .icono {
         display: block;

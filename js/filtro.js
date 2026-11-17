@@ -1,11 +1,20 @@
 // Galería de bandas: se arma a partir de bandas.json y se filtra por género
 const galeria = document.getElementById('galeria');
 const filtros = document.querySelectorAll('.filter');
+const buscador = document.getElementById('buscar');
+const sinResultados = document.getElementById('sin-resultados');
+let generoActual = 'todos';
+
+// Quita tildes, mayúsculas y signos: "Guns N' Roses" → "gunsnroses", "AC/DC" → "acdc"
+function normalizar(texto) {
+    return texto.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
 
 function crearTarjeta(banda) {
     const tarjeta = document.createElement('div');
     tarjeta.className = 'cont-work';
     tarjeta.dataset.genero = banda.genero;
+    tarjeta.dataset.busqueda = normalizar(banda.nombre);
 
     const marco = document.createElement('div');
     marco.className = 'img-work';
@@ -75,11 +84,26 @@ ficha.addEventListener('click', function (e) {
     }
 });
 
-function filtrar(genero) {
-    galeria.querySelectorAll('.cont-work').forEach(function (tarjeta) {
-        tarjeta.hidden = genero !== 'todos' && tarjeta.dataset.genero !== genero;
+// Muestra solo las tarjetas que cumplen el género elegido y el texto buscado
+function filtrar() {
+    const tarjetas = galeria.querySelectorAll('.cont-work');
+    if (tarjetas.length === 0) {
+        return;
+    }
+    const texto = normalizar(buscador.value);
+    let visibles = 0;
+    tarjetas.forEach(function (tarjeta) {
+        const coincideGenero = generoActual === 'todos' || tarjeta.dataset.genero === generoActual;
+        const coincideTexto = tarjeta.dataset.busqueda.includes(texto);
+        tarjeta.hidden = !(coincideGenero && coincideTexto);
+        if (!tarjeta.hidden) {
+            visibles++;
+        }
     });
+    sinResultados.textContent = visibles === 0 ? 'No hay bandas que coincidan con tu búsqueda.' : '';
 }
+
+buscador.addEventListener('input', filtrar);
 
 filtros.forEach(function (boton) {
     boton.addEventListener('click', function () {
@@ -89,7 +113,8 @@ filtros.forEach(function (boton) {
         });
         boton.classList.add('active');
         boton.setAttribute('aria-pressed', 'true');
-        filtrar(boton.dataset.nombre);
+        generoActual = boton.dataset.nombre;
+        filtrar();
     });
 });
 
@@ -102,8 +127,8 @@ fetch('bandas.json')
     })
     .then(function (bandas) {
         galeria.replaceChildren(...bandas.map(crearTarjeta));
-        // Respeta el filtro si el usuario lo eligió antes de que cargaran las bandas
-        filtrar(document.querySelector('.filter.active').dataset.nombre);
+        // Respeta el filtro y la búsqueda si el usuario los usó antes de que cargaran las bandas
+        filtrar();
     })
     .catch(function () {
         const aviso = document.createElement('p');

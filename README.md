@@ -22,6 +22,8 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 
 - **Galería filtrable**: once bandas organizadas en Hard Rock, Heavy Metal, Thrash Metal y Death Metal. Las tarjetas se generan con JavaScript a partir de `bandas.json`.
 - **Ficha de cada banda**: al pulsar una tarjeta se abre una ventana (`<dialog>`) con el país, el año de formación, una breve reseña y un video oficial de YouTube. Se cierra con Escape, con la ✕ o haciendo clic afuera.
+- **Buscador**: filtra las bandas por nombre mientras escribes y se combina con el filtro por género. No importan las tildes, las mayúsculas ni los signos (por ejemplo, "ac dc" encuentra AC/DC).
+- **Modo oscuro**: botón ☀/☾ en el menú. La primera vez sigue el modo del sistema y después recuerda tu elección.
 - **Navegación con desplazamiento suave** hacia cada sección.
 - **Menú adaptable**: cambia de estilo al hacer scroll y se convierte en menú lateral en pantallas pequeñas.
 - **Diseño responsive** para escritorio, tablet y móvil.
@@ -40,7 +42,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 |---|---|
 | HTML5 | Estructura semántica del sitio |
 | CSS3 | Estilos, variables, Grid, Flexbox, animaciones, desplazamiento suave y media queries |
-| JavaScript | Menú, galería generada desde JSON con `fetch`, filtro y cambios al hacer scroll |
+| JavaScript | Menú, galería generada desde JSON con `fetch`, filtro, buscador, modo oscuro con `localStorage` y cambios al hacer scroll |
 | JSON | Datos de las bandas (`bandas.json`) |
 | YouTube | Videos oficiales insertados con `youtube-nocookie.com`, que solo se cargan al abrir la ficha |
 | SVG | Logo propio e íconos de redes sociales de [Simple Icons](https://simpleicons.org/) (dominio público, CC0) |
@@ -54,8 +56,9 @@ Primera-Web-Kevin/
 ├── estilos.css     # Estilos del sitio
 ├── bandas.json     # Datos de las bandas de la galería
 ├── js/
+│   ├── tema.js     # Modo claro / oscuro
 │   ├── main.js     # Menú y cambios al hacer scroll
-│   └── filtro.js   # Galería y filtro por género
+│   └── filtro.js   # Galería, ficha, filtro y buscador
 ├── img/            # Imágenes del sitio
 └── docs/           # Capturas para este README
 ```
