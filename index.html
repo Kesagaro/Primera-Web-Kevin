@@ -89,6 +89,10 @@
         <section class="work contenedor" id="bandas">
             <h2>Bandas</h2>
             <p class="after">Algunas bandas representativas de cada género</p>
+            <div class="buscador">
+                <label for="buscar" class="solo-lectores">Buscar banda</label>
+                <input type="search" id="buscar" placeholder="Buscar banda…" autocomplete="off">
+            </div>
             <div class="botones-work">
                 <ul>
                     <li><button type="button" class="filter active" data-nombre="todos" aria-pressed="true">Todos</button></li>
@@ -101,6 +105,7 @@
             <div class="galeria-work" id="galeria">
                 <noscript><p class="aviso-galeria">Activa JavaScript para ver la galería de bandas.</p></noscript>
             </div>
+            <p class="sin-resultados" id="sin-resultados" role="status"></p>
         </section>
     </main>
     <footer id="contacto">
