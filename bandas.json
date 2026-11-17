@@ -5,7 +5,14 @@
         "imagen": "img/iron-maiden.webp",
         "alt": "Banda Iron Maiden",
         "ancho": 810,
-        "alto": 540
+        "alto": 540,
+        "pais": "Reino Unido",
+        "formacion": 1975,
+        "descripcion": "Una de las bandas clave de la nueva ola del heavy metal británico. Conocida por sus galopes de bajo, las guitarras armónicas y su mascota Eddie. Discos destacados: The Number of the Beast (1982) y Powerslave (1984).",
+        "video": {
+            "id": "X4bgXH3sJ2Q",
+            "titulo": "The Trooper"
+        }
     },
     {
         "nombre": "Black Sabbath",
@@ -13,7 +20,14 @@
         "imagen": "img/black-sabbath.webp",
         "alt": "Banda Black Sabbath",
         "ancho": 806,
-        "alto": 540
+        "alto": 540,
+        "pais": "Reino Unido",
+        "formacion": 1968,
+        "descripcion": "Formada en Birmingham por Tony Iommi, Ozzy Osbourne, Geezer Butler y Bill Ward. Sus riffs lentos y pesados la convirtieron en la pionera del heavy metal. Discos destacados: Paranoid (1970) y Master of Reality (1971).",
+        "video": {
+            "id": "0qanF-91aJo",
+            "titulo": "Paranoid"
+        }
     },
     {
         "nombre": "Judas Priest",
@@ -21,7 +35,14 @@
         "imagen": "img/judas-priest.webp",
         "alt": "Banda Judas Priest",
         "ancho": 805,
-        "alto": 540
+        "alto": 540,
+        "pais": "Reino Unido",
+        "formacion": 1969,
+        "descripcion": "También de Birmingham, definió la imagen del metal con el cuero y las tachas, y el sonido de dos guitarras líderes. La voz aguda de Rob Halford es su sello. Discos destacados: British Steel (1980) y Painkiller (1990).",
+        "video": {
+            "id": "L397TWLwrUU",
+            "titulo": "Breaking the Law"
+        }
     },
     {
         "nombre": "AC/DC",
@@ -29,7 +50,14 @@
         "imagen": "img/ac-dc.webp",
         "alt": "Banda AC/DC",
         "ancho": 720,
-        "alto": 540
+        "alto": 540,
+        "pais": "Australia",
+        "formacion": 1973,
+        "descripcion": "Fundada en Sídney por los hermanos Malcolm y Angus Young. Riffs simples y directos con raíces en el blues. Back in Black (1980) es uno de los discos más vendidos de la historia.",
+        "video": {
+            "id": "v2AC41dglnM",
+            "titulo": "Thunderstruck"
+        }
     },
     {
         "nombre": "Guns N' Roses",
@@ -37,7 +65,14 @@
         "imagen": "img/guns-n-roses.webp",
         "alt": "Banda Guns N' Roses",
         "ancho": 960,
-        "alto": 518
+        "alto": 518,
+        "pais": "Estados Unidos",
+        "formacion": 1985,
+        "descripcion": "Nació en Los Ángeles con Axl Rose y Slash al frente. Su primer disco, Appetite for Destruction (1987), es uno de los debuts más vendidos de la historia.",
+        "video": {
+            "id": "1w7OgIMMRc4",
+            "titulo": "Sweet Child O' Mine"
+        }
     },
     {
         "nombre": "Led Zeppelin",
@@ -45,7 +80,14 @@
         "imagen": "img/led-zeppelin.webp",
         "alt": "Banda Led Zeppelin",
         "ancho": 800,
-        "alto": 540
+        "alto": 540,
+        "pais": "Reino Unido",
+        "formacion": 1968,
+        "descripcion": "Jimmy Page, Robert Plant, John Paul Jones y John Bonham mezclaron blues, folk y rock pesado. Se separaron en 1980. Disco destacado: Led Zeppelin IV (1971), el de Stairway to Heaven.",
+        "video": {
+            "id": "HQmmM_qwG4k",
+            "titulo": "Whole Lotta Love"
+        }
     },
     {
         "nombre": "Slayer",
@@ -53,7 +95,14 @@
         "imagen": "img/slayer.webp",
         "alt": "Banda Slayer",
         "ancho": 621,
-        "alto": 540
+        "alto": 540,
+        "pais": "Estados Unidos",
+        "formacion": 1981,
+        "descripcion": "Formada en California, es parte de los “cuatro grandes” del thrash metal junto a Metallica, Megadeth y Anthrax. Velocidad y agresividad extremas. Disco destacado: Reign in Blood (1986).",
+        "video": {
+            "id": "DECp8LKurKs",
+            "titulo": "Seasons in the Abyss"
+        }
     },
     {
         "nombre": "Testament",
@@ -61,7 +110,14 @@
         "imagen": "img/testament.webp",
         "alt": "Banda Testament",
         "ancho": 810,
-        "alto": 540
+        "alto": 540,
+        "pais": "Estados Unidos",
+        "formacion": 1983,
+        "descripcion": "Banda del Área de la Bahía de San Francisco, cuna del thrash metal. Combina riffs técnicos con la voz potente de Chuck Billy. Discos destacados: The Legacy (1987) y The New Order (1988).",
+        "video": {
+            "id": "FQfgET6TxDY",
+            "titulo": "Practice What You Preach"
+        }
     },
     {
         "nombre": "Death",
@@ -69,7 +125,14 @@
         "imagen": "img/death.webp",
         "alt": "Banda Death",
         "ancho": 759,
-        "alto": 540
+        "alto": 540,
+        "pais": "Estados Unidos",
+        "formacion": 1983,
+        "descripcion": "Creada en Florida por Chuck Schuldiner, considerado el padre del death metal. Empezó con un sonido brutal y evolucionó hacia uno técnico y progresivo. Discos destacados: Scream Bloody Gore (1987) y Human (1991).",
+        "video": {
+            "id": "7j8vUbMmOwM",
+            "titulo": "Lack of Comprehension"
+        }
     },
     {
         "nombre": "Cannibal Corpse",
@@ -77,7 +140,14 @@
         "imagen": "img/cannibal-corpse.webp",
         "alt": "Banda Cannibal Corpse",
         "ancho": 960,
-        "alto": 540
+        "alto": 540,
+        "pais": "Estados Unidos",
+        "formacion": 1988,
+        "descripcion": "Formada en Buffalo, Nueva York, es la banda de death metal con más discos vendidos. Conocida por su brutalidad y sus portadas polémicas. Disco destacado: Tomb of the Mutilated (1992).",
+        "video": {
+            "id": "vlgiWBCbCJk",
+            "titulo": "Hammer Smashed Face"
+        }
     },
     {
         "nombre": "Morbid Angel",
@@ -85,6 +155,13 @@
         "imagen": "img/morbid-angel.webp",
         "alt": "Banda Morbid Angel",
         "ancho": 811,
-        "alto": 540
+        "alto": 540,
+        "pais": "Estados Unidos",
+        "formacion": 1983,
+        "descripcion": "Una de las bandas fundadoras del death metal de Tampa, Florida. Destaca por la guitarra caótica de Trey Azagthoth. Discos destacados: Altars of Madness (1989) y Covenant (1993).",
+        "video": {
+            "id": "lyPvUIt_YWg",
+            "titulo": "God of Emptiness"
+        }
     }
 ]

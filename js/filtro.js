@@ -20,13 +20,60 @@ function crearTarjeta(banda) {
 
     const textos = document.createElement('div');
     textos.className = 'textos-work';
+    // El botón va dentro del h3; con CSS su área cubre toda la tarjeta
     const nombre = document.createElement('h3');
-    nombre.textContent = banda.nombre;
+    const abrirFicha = document.createElement('button');
+    abrirFicha.type = 'button';
+    abrirFicha.className = 'ver-ficha';
+    abrirFicha.textContent = banda.nombre;
+    abrirFicha.setAttribute('aria-haspopup', 'dialog');
+    abrirFicha.addEventListener('click', function () {
+        mostrarFicha(banda);
+    });
+    nombre.appendChild(abrirFicha);
     textos.appendChild(nombre);
 
     tarjeta.append(marco, textos);
     return tarjeta;
 }
+
+// Ficha de la banda con su video oficial
+const ficha = document.getElementById('ficha');
+const fichaVideo = ficha.querySelector('.ficha-video');
+
+function mostrarFicha(banda) {
+    ficha.querySelector('#ficha-nombre').textContent = banda.nombre;
+    ficha.querySelector('.ficha-datos').textContent = banda.pais + ' · Desde ' + banda.formacion;
+    ficha.querySelector('.ficha-descripcion').textContent = banda.descripcion;
+    ficha.querySelector('.ficha-enlace').href = 'https://www.youtube.com/watch?v=' + banda.video.id;
+
+    // El video se carga solo al abrir la ficha; youtube-nocookie no deja cookies hasta darle play
+    const video = document.createElement('iframe');
+    video.src = 'https://www.youtube-nocookie.com/embed/' + banda.video.id;
+    video.title = banda.nombre + ': ' + banda.video.titulo;
+    video.allow = 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    video.referrerPolicy = 'strict-origin-when-cross-origin';
+    video.allowFullscreen = true;
+    fichaVideo.replaceChildren(video);
+
+    ficha.showModal();
+}
+
+// Al cerrar se quita el iframe para que el video deje de sonar
+ficha.addEventListener('close', function () {
+    fichaVideo.replaceChildren();
+});
+
+ficha.querySelector('.ficha-cerrar').addEventListener('click', function () {
+    ficha.close();
+});
+
+// Un clic en el fondo oscuro (fuera del contenido) también cierra la ficha
+ficha.addEventListener('click', function (e) {
+    if (e.target === ficha) {
+        ficha.close();
+    }
+});
 
 function filtrar(genero) {
     galeria.querySelectorAll('.cont-work').forEach(function (tarjeta) {

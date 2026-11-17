@@ -292,6 +292,127 @@ nav .enlaces a:focus-visible {
     font-weight: 300;
 }
 
+/* Toda la tarjeta abre la ficha: el ::after del botón la cubre completa */
+.cont-work {
+    position: relative;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.cont-work:hover,
+.cont-work:has(.ver-ficha:focus-visible) {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px 0 rgba(0, 0, 0, .5);
+}
+
+.cont-work:has(.ver-ficha:focus-visible) {
+    outline: 3px solid var(--color1);
+    outline-offset: 3px;
+}
+
+.ver-ficha {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.ver-ficha:focus-visible {
+    outline: none;
+}
+
+.ver-ficha::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+
+/* Ficha de banda */
+
+.ficha {
+    width: min(90vw, 720px);
+    max-height: 90vh;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: var(--fondo-oscuro);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .6);
+}
+
+.ficha::backdrop {
+    background: rgba(0, 0, 0, .75);
+}
+
+/* Evita que la página de fondo se desplace mientras la ficha está abierta */
+body:has(.ficha[open]) {
+    overflow: hidden;
+}
+
+.ficha-contenido {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
+
+.ficha h2 {
+    font-size: 28px;
+    color: var(--color1);
+    padding: 0 40px;
+}
+
+.ficha-datos {
+    margin: 5px 0 15px;
+    font-weight: 700;
+    color: #ccc;
+}
+
+.ficha-descripcion {
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.ficha-video {
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.ficha-video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.ficha-enlace {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--color1);
+}
+
+.ficha-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.ficha-cerrar:focus-visible,
+.ficha-enlace:focus-visible {
+    outline: 2px solid var(--color1);
+    outline-offset: 2px;
+}
+
 
 /* Footer */
 
@@ -374,6 +495,12 @@ footer p {
     }
     .marca-logo {
         width: 80%;
+    }
+    .ficha-contenido {
+        padding: 20px 15px;
+    }
+    .ficha h2 {
+        font-size: 24px;
     }
     .iconos {
         margin: auto;
