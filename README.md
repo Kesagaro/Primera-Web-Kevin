@@ -24,6 +24,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 - **Ficha de cada banda**: al pulsar una tarjeta se abre una ventana (`<dialog>`) con el país, el año de formación, una breve reseña y un video oficial de YouTube. Se cierra con Escape, con la ✕ o haciendo clic afuera.
 - **Buscador**: filtra las bandas por nombre mientras escribes y se combina con el filtro por género. No importan las tildes, las mayúsculas ni los signos (por ejemplo, "ac dc" encuentra AC/DC).
 - **Modo oscuro**: botón ☀/☾ en el menú. La primera vez sigue el modo del sistema y después recuerda tu elección.
+- **Animaciones al hacer scroll**: títulos, tarjetas y secciones aparecen suavemente al llegar a ellos. Si el sistema tiene activado "reducir movimiento", la página se muestra sin animaciones.
 - **Navegación con desplazamiento suave** hacia cada sección.
 - **Menú adaptable**: cambia de estilo al hacer scroll y se convierte en menú lateral en pantallas pequeñas.
 - **Diseño responsive** para escritorio, tablet y móvil.
@@ -33,7 +34,10 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 - **Sin librerías**: todo el comportamiento está hecho con JavaScript nativo.
 
 <div align="center">
-<img src="docs/captura-bandas.jpg" alt="Galería de bandas con filtros por género" width="800">
+<img src="docs/captura-bandas.jpg" alt="Galería de bandas con buscador y filtros por género" width="800">
+<br><br>
+<img src="docs/captura-ficha.jpg" alt="Ficha de Iron Maiden con su video oficial" width="395">
+<img src="docs/captura-oscuro.jpg" alt="Galería de bandas en modo oscuro" width="395">
 </div>
 
 ## Tecnologías
@@ -52,15 +56,16 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 
 ```
 Primera-Web-Kevin/
-├── index.html      # Página principal
-├── estilos.css     # Estilos del sitio
-├── bandas.json     # Datos de las bandas de la galería
+├── index.html          # Página principal
+├── estilos.css         # Estilos del sitio
+├── bandas.json         # Datos de las bandas de la galería
 ├── js/
-│   ├── tema.js     # Modo claro / oscuro
-│   ├── main.js     # Menú y cambios al hacer scroll
-│   └── filtro.js   # Galería, ficha, filtro y buscador
-├── img/            # Imágenes del sitio
-└── docs/           # Capturas para este README
+│   ├── tema.js         # Modo claro / oscuro
+│   ├── main.js         # Menú y cambios al hacer scroll
+│   ├── animaciones.js  # Animaciones al hacer scroll
+│   └── filtro.js       # Galería, ficha, filtro y buscador
+├── img/                # Imágenes del sitio
+└── docs/               # Capturas para este README
 ```
 
 ## Cómo ejecutarlo
