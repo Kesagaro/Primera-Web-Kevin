@@ -64,22 +64,22 @@
     <main>
         <section class="about" id="generos">
             <div class="contenedor">
-                <h2>Géneros conocidos</h2>
-                <p class="after">4 géneros conocidos del rock y el metal</p>
+                <h2 data-revelar>Géneros conocidos</h2>
+                <p class="after" data-revelar>4 géneros conocidos del rock y el metal</p>
                 <div class="servicios">
-                    <div class="caja-servicios">
+                    <div class="caja-servicios" data-revelar>
                         <h3>Heavy Metal</h3>
                         <p>Nació a finales de los años 60 a partir del hard rock y el blues rock. Se caracteriza por guitarras eléctricas distorsionadas, solos virtuosos, ritmos contundentes y voces potentes.</p>
                     </div>
-                    <div class="caja-servicios">
+                    <div class="caja-servicios" data-revelar>
                         <h3>Hard Rock</h3>
                         <p>Combina el rock and roll y el blues con un sonido más fuerte: guitarras eléctricas distorsionadas, bajo, batería y, en ocasiones, teclados.</p>
                     </div>
-                    <div class="caja-servicios">
+                    <div class="caja-servicios" data-revelar>
                         <h3>Thrash Metal</h3>
                         <p>Subgénero más rápido y agresivo del heavy metal, surgido a comienzos de los años 80. Mezcla la velocidad del hardcore punk con riffs cortantes, doble bombo y solos rápidos.</p>
                     </div>
-                    <div class="caja-servicios">
+                    <div class="caja-servicios" data-revelar>
                         <h3>Death Metal</h3>
                         <p>Subgénero extremo del metal surgido a mediados de los años 80. Se caracteriza por voces guturales, guitarras graves y muy distorsionadas, blast beats en la batería y letras oscuras.</p>
                     </div>
@@ -87,13 +87,13 @@
             </div>
         </section>
         <section class="work contenedor" id="bandas">
-            <h2>Bandas</h2>
-            <p class="after">Algunas bandas representativas de cada género</p>
-            <div class="buscador">
+            <h2 data-revelar>Bandas</h2>
+            <p class="after" data-revelar>Algunas bandas representativas de cada género</p>
+            <div class="buscador" data-revelar>
                 <label for="buscar" class="solo-lectores">Buscar banda</label>
                 <input type="search" id="buscar" placeholder="Buscar banda…" autocomplete="off">
             </div>
-            <div class="botones-work">
+            <div class="botones-work" data-revelar>
                 <ul>
                     <li><button type="button" class="filter active" data-nombre="todos" aria-pressed="true">Todos</button></li>
                     <li><button type="button" class="filter" data-nombre="hard-rock" aria-pressed="false">Hard Rock</button></li>
@@ -110,16 +110,16 @@
     </main>
     <footer id="contacto">
         <div class="footer contenedor">
-            <div class="marca-logo">
+            <div class="marca-logo" data-revelar>
                 <img src="img/logo.svg" alt="Rock and Metal" width="120" height="140">
             </div>
-            <div class="iconos">
+            <div class="iconos" data-revelar>
                 <a href="https://www.youtube.com/@Paradoxx_02" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                 <svg class="icono-red" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
                 <a href="https://github.com/Kesagaro" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                 <svg class="icono-red" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
             </div>
-            <p>Hecho a todo volumen: guitarras distorsionadas, puños en alto y un corazón que late al ritmo del doble bombo.</p>
+            <p data-revelar>Hecho a todo volumen: guitarras distorsionadas, puños en alto y un corazón que late al ritmo del doble bombo.</p>
         </div>
 
     </footer>
@@ -136,6 +136,7 @@
     </dialog>
     <script src="js/tema.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/animaciones.js"></script>
     <script src="js/filtro.js"></script>
 </body>
 

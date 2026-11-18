@@ -126,7 +126,12 @@ fetch('bandas.json')
         return respuesta.json();
     })
     .then(function (bandas) {
-        galeria.replaceChildren(...bandas.map(crearTarjeta));
+        const tarjetas = bandas.map(crearTarjeta);
+        galeria.replaceChildren(...tarjetas);
+        // Las tarjetas aparecen al hacer scroll (función de animaciones.js)
+        if (typeof revelarAlVer === 'function') {
+            revelarAlVer(tarjetas);
+        }
         // Respeta el filtro y la búsqueda si el usuario los usó antes de que cargaran las bandas
         filtrar();
     })

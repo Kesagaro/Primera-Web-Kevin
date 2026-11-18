@@ -511,6 +511,34 @@ body:has(.ficha[open]) {
 }
 
 
+/* Animaciones al hacer scroll (js/animaciones.js): solo si hay JavaScript
+   y el sistema no pide reducir el movimiento */
+.animar .revelar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+    transition-delay: var(--retraso, 0ms);
+}
+
+.animar .revelar.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Reducir movimiento: sin desplazamiento suave ni animaciones */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
 /* Footer */
 
 footer {
