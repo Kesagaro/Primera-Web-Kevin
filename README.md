@@ -25,6 +25,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 - **Buscador**: filtra las bandas por nombre mientras escribes y se combina con el filtro por género. No importan las tildes, las mayúsculas ni los signos (por ejemplo, "ac dc" encuentra AC/DC).
 - **Modo oscuro**: botón ☀/☾ en el menú. La primera vez sigue el modo del sistema y después recuerda tu elección.
 - **Animaciones al hacer scroll**: títulos, tarjetas y secciones aparecen suavemente al llegar a ellos. Si el sistema tiene activado "reducir movimiento", la página se muestra sin animaciones.
+- **Página 404 propia**: si alguien entra a una dirección que no existe, ve una página con el estilo del sitio y un botón para volver al inicio.
 - **Navegación con desplazamiento suave** hacia cada sección.
 - **Menú adaptable**: cambia de estilo al hacer scroll y se convierte en menú lateral en pantallas pequeñas.
 - **Diseño responsive** para escritorio, tablet y móvil.
@@ -57,6 +58,7 @@ Sitio web de una sola página que desarrollé en el colegio como mi primer proye
 ```
 Primera-Web-Kevin/
 ├── index.html          # Página principal
+├── 404.html            # Página de error cuando una dirección no existe
 ├── estilos.css         # Estilos del sitio
 ├── bandas.json         # Datos de las bandas de la galería
 ├── js/
